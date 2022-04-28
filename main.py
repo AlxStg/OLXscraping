@@ -56,20 +56,41 @@ def dictToCsv(item_dic):
 
 # Inicia o browser
 chrome = webdriver.Chrome()
+
 # Percorre a paginação da categoria para obter os links de todos os anúncios
 url_list = []
 
+for i in (range(1, 2 )):
+    chrome.get(getUrl(i))
+    itens = chrome.find_elements(by=By.CLASS_NAME, value="sc-12rk7z2-0")
+        
+    for item in itens:
+        item_link = item.find_element(by=By.TAG_NAME, value='a').get_attribute('href')
+        url_list.append(item_link)
 
-chrome.get(getUrl(1))
-itens = chrome.find_elements(by=By.CLASS_NAME, value="sc-12rk7z2-0")
+print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+print()
+print(f'>>>> {len(url_list)} Links encontrados')
+print()
+print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+
+
+item_json_lst = []
+item_index = 0
+for i, url in enumerate(url_list):
+    if 'olx.com.br' not in url:
+        continue
+    chrome.get(url)
     
-print(itens)
-#  "sc-12rk7z2-0 bDLpyo"
+    json_iten = chrome.find_element(by=By.ID, value="initial-data")
+    print(json_iten)   
+    atrib_json = json_iten.get_attribute('data-json')
+    print(atrib_json)
+    item_json_lst.append(atrib_json)
 
-for item in itens:
-    item_link = item.find_element(by=By.TAG_NAME, value='a').get_attribute('href')
-    url_list.append(item_link)
-
-print(url_list)
+print (item_json_lst)
 
 chrome.quit()
+
