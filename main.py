@@ -1,6 +1,5 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import numpy as np
 import pandas as pd
 
 
@@ -60,12 +59,13 @@ chrome = webdriver.Chrome()
 # Percorre a paginação da categoria para obter os links de todos os anúncios
 url_list = []
 
-for i in (range(1, 2 )):
+for i in (range(1, 2)):
     chrome.get(getUrl(i))
     itens = chrome.find_elements(by=By.CLASS_NAME, value="sc-12rk7z2-0")
-        
+
     for item in itens:
-        item_link = item.find_element(by=By.TAG_NAME, value='a').get_attribute('href')
+        item_link = item.find_element(
+            by=By.TAG_NAME, value='a').get_attribute('href')
         url_list.append(item_link)
 
 print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
@@ -83,14 +83,13 @@ for i, url in enumerate(url_list):
     if 'olx.com.br' not in url:
         continue
     chrome.get(url)
-    
+
     json_iten = chrome.find_element(by=By.ID, value="initial-data")
-    print(json_iten)   
+    print(json_iten)
     atrib_json = json_iten.get_attribute('data-json')
     print(atrib_json)
     item_json_lst.append(atrib_json)
 
-print (item_json_lst)
+print(item_json_lst)
 
 chrome.quit()
-
