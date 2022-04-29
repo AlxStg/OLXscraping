@@ -1,56 +1,9 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-import pandas as pd
-
+from dados_anuncio import pegaDados
 
 def getUrl(paginacao):
     return "https://mg.olx.com.br/belo-horizonte-e-regiao/autos-e-pecas/motos?o="+str(paginacao)+"&pe=20000&ps=2000&re=35&rs=18"
-
-
-def dictToCsv(item_dic):
-    '''
-    Coloca o conjunto de daodos no formato correto e o salva em um arquivo '.csv'
-
-    param dara_frame item_dic: O conjunto de dados contendo todos os anúncios
-    '''
-    csv = []
-    print(item_dic)
-    # Salvando os itens em um csv
-    for i in range(len(item_dic)):
-        csv.append([])
-
-        if 'Categoria' in item_dic[i]:
-            csv[i].append(item_dic[i]['Categoria'])
-        else:
-            csv[i].append(float('NaN'))
-        if 'Modelo' in item_dic[i]:
-            csv[i].append(item_dic[i]['Modelo'])
-        else:
-            csv[i].append(float('NaN'))
-        if 'Cilindrada' in item_dic[i]:
-            csv[i].append(item_dic[i]['Cilindrada'])
-        else:
-            csv[i].append(float('NaN'))
-        if 'Quilometragem' in item_dic[i]:
-            csv[i].append(item_dic[i]['Quilometragem'])
-        else:
-            csv[i].append(float('NaN'))
-        if 'Ano' in item_dic[i]:
-            csv[i].append(item_dic[i]['Ano'])
-        else:
-            csv[i].append(float('NaN'))
-        if 'url' in item_dic[i]:
-            csv[i].append(item_dic[i]['url'])
-        else:
-            csv[i].append(float('NaN'))
-        if 'preco' in item_dic[i]:
-            csv[i].append(item_dic[i]['preco'])
-        else:
-            csv[i].append(float('NaN'))
-        header = ['categoria', 'modelo', 'cilindrada',
-                  'quilometragem', 'ano', 'url', 'preco']
-
-        pd.DataFrame(csv).to_csv('olx_data.csv', header=header, index=False)
 
 
 # Inicia o browser
@@ -75,21 +28,14 @@ print(f'>>>> {len(url_list)} Links encontrados')
 print()
 print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
 print('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&')
+chrome.quit()
 
-
-item_json_lst = []
+dados_anuncios = []
 item_index = 0
 for i, url in enumerate(url_list):
     if 'olx.com.br' not in url:
         continue
-    chrome.get(url)
-
-    json_iten = chrome.find_element(by=By.ID, value="initial-data")
-    print(json_iten)
-    atrib_json = json_iten.get_attribute('data-json')
-    print(atrib_json)
-    item_json_lst.append(atrib_json)
-
-print(item_json_lst)
-
-chrome.quit()
+    atrib_anun = pegaDados(url)
+    print (atrib_anun)
+    dados_anuncios.append(atrib_anun)
+print(dados_anuncios)

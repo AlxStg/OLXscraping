@@ -1,0 +1,281 @@
+{
+    "ad": {
+        "adId": 1256136634,
+        "listId": 1025885445,
+        "body": "CBX 250 twister 2004 super nova com pneus bons, painel novo, motor bom, toda revisada, sem vazamentos.Bastante conservada! <br><br>NÃO TROCO, APENAS VENDO!! ",
+        "subject": "CBX 250 TWISTER 2004",
+        "priceLabel": "Preço",
+        "priceValue": "R$ 6.200",
+        "oldPrice": null,
+        "professionalAd": false,
+        "category": 2060,
+        "parentCategoryName": "Autos e peças",
+        "categoryName": "Motos",
+        "searchCategoryLevelZero": 2000,
+        "searchCategoryLevelOne": 2060,
+        "searchCategoryLevelTwo": 0,
+        "origListTime": 1651147976,
+        "adReply": "0",
+        "friendlyUrl": "https: //mg.olx.com.br/belo-horizonte-e-regiao/autos-e-pecas/motos/cbx-250-twister-2004-1025885445",
+        "loanSpecificData": null,
+        "user": {
+            "userId": 124058998,
+            "userUid": 122341826,
+            "publicAccountId": "724a043f-a73c-45f8-b5fb-1fa40047a79d",
+            "name": "Hyago",
+            "configs": {
+                "chatEnabled": true,
+                "competitionLock": false,
+                "proAccount": false
+            },
+            "accountId": 115517535
+        },
+        "phone": {
+            "phone": "",
+            "phoneHidden": true,
+            "phoneVerified": true
+        },
+        "images": [
+            {
+                "original": "https://img.olx.com.br/images/10/109232513878388.jpg",
+                "originalAlt": "CBX 250 TWISTER 2004",
+                "thumbnail": "https://img.olx.com.br/thumbs/10/109232513878388.jpg"
+            },
+            {
+                "original": "https://img.olx.com.br/images/10/106282758308431.jpg",
+                "originalAlt": "CBX 250 TWISTER 2004 - Foto 2",
+                "thumbnail": "https://img.olx.com.br/thumbs/10/106282758308431.jpg"
+            },
+            {
+                "original": "https://img.olx.com.br/images/10/104202278027138.jpg",
+                "originalAlt": "CBX 250 TWISTER 2004 - Foto 3",
+                "thumbnail": "https://img.olx.com.br/thumbs/10/104202278027138.jpg"
+            },
+            {
+                "original": "https://img.olx.com.br/images/10/102201275980546.jpg",
+                "originalAlt": "CBX 250 TWISTER 2004 - Foto 4",
+                "thumbnail": "https://img.olx.com.br/thumbs/10/102201275980546.jpg"
+            },
+            {
+                "original": "https://img.olx.com.br/images/10/109206639502164.jpg",
+                "originalAlt": "CBX 250 TWISTER 2004 - Foto 5",
+                "thumbnail": "https://img.olx.com.br/thumbs/10/109206639502164.jpg"
+            },
+            {
+                "original": "https://img.olx.com.br/images/10/102290515621712.jpg",
+                "originalAlt": "CBX 250 TWISTER 2004 - Foto 6",
+                "thumbnail": "https://img.olx.com.br/thumbs/10/102290515621712.jpg"
+            }
+        ],
+        "videos": null,
+        "location": {
+            "address": null,
+            "neighbourhood": "São Paulo",
+            "neighbourhoodId": 43745,
+            "municipality": "Belo Horizonte",
+            "municipalityId": 9085,
+            "zipcode": "31910110",
+            "mapLati": 0,
+            "mapLong": 0,
+            "uf": "MG",
+            "ddd": "31",
+            "zoneId": 1622,
+            "zone": "zona-nordeste",
+            "region": "Belo Horizonte e região, MG"
+        },
+        "vehicleSpecificData": [],
+        "properties": [
+            {
+                "name": "category",
+                "label": "Categoria",
+                "value": "Motos",
+                "values": null,
+                "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/zona-nordeste/autos-e-pecas/motos"
+            },
+            {
+                "name": "vehicle_model",
+                "label": "Modelo",
+                "value": "HONDA CBX 250 TWISTER",
+                "values": null,
+                "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/zona-nordeste/autos-e-pecas/motos/chrysler/neon"
+            },
+            {
+                "name": "regdate",
+                "label": "Ano",
+                "value": "2004",
+                "values": null,
+                "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/zona-nordeste/autos-e-pecas/motos/chrysler/neon/2004"
+            },
+            {
+                "name": "mileage",
+                "label": "Quilometragem",
+                "value": "1",
+                "values": null,
+                "url": null
+            },
+            {
+                "name": "cubiccms",
+                "label": "Cilindrada",
+                "value": "250",
+                "values": null,
+                "url": null
+            }
+        ],
+        "pubSpecificData": [
+            {
+                "context": "width=300,height=250",
+                "data": [
+                    {
+                        "key": "appnexus_placement_id",
+                        "value": "11647460"
+                    },
+                    {
+                        "key": "aol_placement_id",
+                        "value": "4349252,4349257"
+                    },
+                    {
+                        "key": "criteo_zone_id",
+                        "value": "802888"
+                    }
+                ]
+            },
+            {
+                "context": "width=*,height=*",
+                "data": [
+                    {
+                        "key": "afsh_channel_id",
+                        "value": null
+                    },
+                    {
+                        "key": "afsh_pub_id",
+                        "value": "partner-vert-pla-olx-pdp"
+                    }
+                ]
+            }
+        ],
+        "trackingSpecificData": [
+            {
+                "key": "region",
+                "value": "Belo Horizonte e região"
+            },
+            {
+                "key": "model",
+                "value": "CBX"
+            },
+            {
+                "key": "version",
+                "value": "CBX 250 TWISTER"
+            }
+        ],
+        "searchboxes": [
+            {
+                "label": "Agro e indústria",
+                "link": "https://www.olx.com.br/agro-e-industria"
+            },
+            {
+                "label": "Animais de estimação",
+                "link": "https://www.olx.com.br/animais-de-estimacao"
+            },
+            {
+                "label": "Artigos infantis",
+                "link": "https://www.olx.com.br/artigos-infantis"
+            },
+            {
+                "label": "Autos e peças",
+                "link": "https://www.olx.com.br/autos-e-pecas"
+            },
+            {
+                "label": "Comércio e escritório",
+                "link": "https://www.olx.com.br/comercio-e-escritorio"
+            },
+            {
+                "label": "Eletrônicos e celulares",
+                "link": "https://www.olx.com.br/eletronicos-e-celulares"
+            },
+            {
+                "label": "Esportes e lazer",
+                "link": "https://www.olx.com.br/esportes-e-lazer"
+            },
+            {
+                "label": "Imóveis",
+                "link": "https://www.olx.com.br/imoveis"
+            },
+            {
+                "label": "Moda e beleza",
+                "link": "https://www.olx.com.br/moda-e-beleza"
+            },
+            {
+                "label": "Música e hobbies",
+                "link": "https://www.olx.com.br/musica-e-hobbies"
+            },
+            {
+                "label": "Para a sua casa",
+                "link": "https://www.olx.com.br/para-a-sua-casa"
+            },
+            {
+                "label": "Serviços",
+                "link": "https://www.olx.com.br/servicos"
+            },
+            {
+                "label": "Vagas de emprego",
+                "link": "https://www.olx.com.br/vagas-de-emprego"
+            }
+        ],
+        "breadcrumbUrls": [
+            {
+                "label": "Minas Gerais",
+                "url": "https://mg.olx.com.br"
+            },
+            {
+                "label": "Belo Horizonte e região",
+                "url": "https://mg.olx.com.br/belo-horizonte-e-regiao"
+            },
+            {
+                "label": "Motos",
+                "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/autos-e-pecas/motos"
+            },
+            {
+                "label": "Zona Nordeste",
+                "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/zona-nordeste/autos-e-pecas/motos"
+            },
+            {
+                "label": "São Paulo",
+                "url": "https://mg.olx.com.br/belo-horizonte-e-regiao/zona-nordeste/sao-paulo/autos-e-pecas/motos"
+            }
+        ],
+        "tags": null,
+        "featured": [],
+        "carSpecificData": null,
+        "abuyFipePrice": null,
+        "abuyPriceRef": null,
+        "realEstateSpecificData": {
+            "showSimulatorButton": false
+        },
+        "olxPay": null,
+        "olxDelivery": null,
+        "vehicleReport": {
+            "enabled": false,
+            "title": null,
+            "description": null,
+            "reportLink": null,
+            "reportTitle": null,
+            "tags": null
+        },
+        "description": "CBX 250 twister 2004 super nova com pneus bons, painel novo, motor bom, toda revisada, sem vazamentos. Bastante conservada! <br><br>NÃO TROCO, APENAS VENDO!! ",
+        "price": "R$ 6.200",
+        "listTime": "2022-04-28T12:12:56.000Z",
+        "locationProperties": [
+            {
+                "label": "CEP",
+                "value": "31910110"
+            },
+            {
+                "label": "Município",
+                "value": "Belo Horizonte"
+            },
+            {
+                "label": "Bairro",
+                "value": "São Paulo"
+            }
+        ],
+        "securityTips": ["Não faça pagamentos antes de verificar se o veículo existe.","Antes de fechar negócio, sempre busque pelo histórico do veículo.","Fique atento a preços abaixo do mercado e a excessos de facilidades."],"denounceLink":"https: //denuncia.olx.com.br/report?from=web&data=eyJsaXN0SWQiOjEwMjU4ODU0NDUsInRpdGxlIjoiQ0JYIDI1MCBUV0lTVEVSIDIwMDQiLCJwcmljZSI6IjYyMDAifQ==","nativeVas":[],"isFeatured":false,"chatEnabled":true,"isCompetitionLock":false,"slotsId":["adBottomLocation"]},"urls":{"CHAT_URL":"https://m.olx.com.br/anuncio/chat?ad_id=","CARTEIRO_SERVICE_URL":"https://apigw.olx.com.br/v1/seller/email","POINTS_OF_SALE_URL":"https://pointsofsales.olx.com.br","AUTH_URL":"https://apigw.olx.com.br/auth/v1/accounts/my","AUTH_ACCESS_KEY":"kkUAvgIi7zuGcj3j18dJSjeq5nnzPv9Z","GOLLUM_URL":"https://gollum.olx.com.br/api/v1/my-precious","FAVORITES_API_URL":"https://apigw.olx.com.br/cdhv/favorite/api/v1","FAVORITES_API_SECRET":"xobt1DEOn8CblfaIFx5Ul5TNI0bKrZ0i","MY_ACCOUNTS_API_URL":"https://apigw.olx.com.br/v3/me","MY_ACCOUNTS_API_SECRET":"JJmohWcaC5OF7AZW2h9uWNvSiDapkxof","PHONE_RANGER_API_URL":"https://apigw.olx.com.br/v1/showphone","DELIVERY_API_URL":"https://delivery-quote.olx.com.br/api/v1","SENTRY_ENVIRONMENT_NAME":"adview-production","BASE_URL":"olx.com.br","AUTOS_PRO_EXPERIENCE_ACCOUNTS_SECRET":"Adpa9RdS4Iv51BHD8bhMwBhcceDzGCoM"},"abTestGroups":"adv-adagio_enabled.adv-adview-afsh-native_enabled.adv-adview-lazyload_enabled.adv-bad-bidders_disabled.adv-has-adblocker_enabled.adv-insureads_enabled.adv-monitoring_enabled.autos-buyers-bjTPZ-price-ref_control.bj-dsapega-bjperformancetracka_control.bj-transactional-info_enabled.confirmation-button-since-to-be-dispatched_enabled.dispute-form-improved_A.financing-async-simulations_enabled.grayzone-facematch_on.imo-card-sug-oi_on.imo-xp-dynamic-map_control.mes-qualtrics_enabled.modal-gestao-de-contatos-web_control.olxpay-buyer-order-details-reviews_enabled.selo-pro-qualificado-ad-description_control.selo-pro-qualificado-mini-perfil_control.shownumber-regex-ddd-web_control.unreadable-category-hide_enabled.vx-videos-on-adview-gallery_second-position","deviceType":"desktop"}
