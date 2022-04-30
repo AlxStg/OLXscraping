@@ -8,7 +8,7 @@ def pegaDados(url):
     from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
     from selenium.webdriver.support import expected_conditions as EC
 
-
+    url_a = str(url)
     dados = {}
     
     capa = DesiredCapabilities.CHROME
@@ -32,53 +32,69 @@ def pegaDados(url):
     chrome.quit()
 
     anuncio = json.loads(conv)
+    try:
+        nome = anuncio['ad']["properties"][1]["value"]
+        dados['nome'] = nome
+    except:
+        dados['nome'] = 'N/A'
 
-    nome = anuncio['ad']["properties"][1]["value"]
-    dados['nome'] = nome
+    try:
+        preco_anterior = anuncio['ad']["oldPrice"]
+        dados['preco_anterior'] = preco_anterior
+    except:
+        dados['preco_anterior'] = 'N/A'
 
-    preco_anterior = anuncio['ad']["oldPrice"]
-    dados['preco_anterior'] = preco_anterior
+    try:
+        preco_str = anuncio['ad']["priceValue"]
+        numeros = ''
+        for caractere in preco_str:
+            if caractere.isdigit():
+                numeros += caractere
+        preco = int(numeros)
+        dados['preco'] = preco
+    except:
+        dados['preco'] = 'N/A'
+    
+    try:
+        imagem = anuncio['ad']["images"][0]["original"]
+        dados['imagem'] = imagem
+    except:
+        dados['imagem'] = 'N/A'
 
-    preco_str = anuncio['ad']["priceValue"]
-    numeros = ''
-    for caractere in preco_str:
-        if caractere.isdigit():
-            numeros += caractere
-    preco = int(numeros)
-    dados['preco'] = preco
+    try:
+        ano = anuncio['ad']["properties"][2]["value"]
+        dados['ano'] = ano
+    except:
+        dados['ano'] = 'N/A'
 
-    imagem = anuncio['ad']["images"][0]["original"]
-    dados['imagem'] = imagem
+    try:
+        cilindradas = anuncio['ad']["properties"][4]["value"]
+        dados['cilindradas'] = cilindradas
+    except:
+        dados['cilindradas'] = 'N/A'
 
-    ano = anuncio['ad']["properties"][2]["value"]
-    dados['ano'] = ano
+    try:    
+        tipo = anuncio['ad']["trackingSpecificData"][1]["value"]
+        dados['tipo'] = tipo
+    except:
+        dados['tipo'] = 'N/A'
 
-    cilindradas = anuncio['ad']["properties"][4]["value"]
-    dados['cilindradas'] = cilindradas
+    try:     
+        cidade = anuncio['ad']["location"]["municipality"]
+        dados['cidade'] = cidade
+    except:
+        dados['cidade'] = 'N/A'
 
-    tipo = anuncio['ad']["trackingSpecificData"][1]["value"]
-    dados['tipo'] = tipo
+    try:    
+        cep = anuncio['ad']["location"]["zipcode"]
+        dados['cep'] = cep
+    except:
+        dados['cep'] = 'N/A'
 
-    cidade = anuncio['ad']["location"]["municipality"]
-    dados['cidade'] = cidade
+    dados['url_anuncio'] = url_a
 
-    cep = anuncio['ad']["location"]["zipcode"]
-    dados['cep'] = cep
-    dados['url_anuncio'] = url
     print('>>>>>>>>> DICIONÁRIO <<<<<<<<<')
     print(dados)
-    print('>>>>>>>>> SAÍDA <<<<<<<<<')
-    print(f'''NOME: {nome}
-    CILINDRADA: {cilindradas} 
-    PREÇO: R${preco:.2f} 
-    PREÇO ANTERIOR: {preco_anterior}
-    IMG. URL: {imagem} 
-    ANO DE FABRICAÇÃO: {ano}
-    CC: {cilindradas}
-    Tipo: {tipo}
-    Anuncio = {url}
-
-
-        ''')
+    
     return dados
 
