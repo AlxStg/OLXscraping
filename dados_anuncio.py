@@ -1,3 +1,6 @@
+from h11 import Data
+
+
 def pegaDados(url):
 
     from selenium import webdriver
@@ -23,12 +26,13 @@ def pegaDados(url):
 
     chrome.execute_script("window.stop();")
 
-   
 
     json_iten = chrome.find_element(by=By.ID, value="initial-data")
     atrib_json = json_iten.get_attribute('data-json')
     saida = html.escape(atrib_json)
     conv = html.unescape(saida)
+    data_anun = chrome.find_element(By.XPATH, '//body/div[2]/div/div[4]/div[2]/div/div[2]/div/div[27]/div/div/div/span[1]').get_attribute('innerHTML').split('em')[1].split('às')[0].split('>')[1]
+    print("data: ", data_anun)
     chrome.quit()
 
     anuncio = json.loads(conv)
