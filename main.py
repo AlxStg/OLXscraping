@@ -65,7 +65,7 @@ for i, url in enumerate(url_list):
 print(dados_anuncios)
 
 #Salva os dados coletados em um arquivo csv
-header = ['nome', 'preco_anterior', 'preco', 'imagem', 'ano', 'cilindradas', 'tipo','cidade', 'cep', 'url_anuncio']
+header = ['nome', 'preco_anterior', 'preco', 'imagem', 'ano', 'cilindradas', 'km', 'tipo', 'bairro', 'cidade', 'cep', 'data', 'cod', 'url']
 
 try:
     with open('csv_dct.csv', 'w') as f:
