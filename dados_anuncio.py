@@ -54,8 +54,8 @@ def pegaDados(chrome, url):
         dados['nome'] = 'N/A'
 
     try:
-        codigo = chrome.find_element(by=By.XPATH, value="//body/div/div/div/div/div/div/div/div/div/div/div/div/div/div[1]/div/dd").get_attribute('innerHTML')
-        dados['cod'] = codigo
+        codigo = chrome.find_element(by=By.CLASS_NAME, value="sc-16iz3i7-0").get_attribute('innerHTML')
+        dados['cod'] = codigo.split('>')[1]
     except:
         na = 1
         dados['cod'] = 'N/A'
