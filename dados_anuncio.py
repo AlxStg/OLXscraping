@@ -42,10 +42,6 @@ def pegaDados(chrome, url):
         na = 1
         dados['data'] = 'N/A'
 
-
-
-
-
     try:
         nome = chrome.find_element(by=By.XPATH, value="//head/title").get_attribute('innerHTML')
         dados['nome'] = nome.split('-')[0].strip()
@@ -61,13 +57,6 @@ def pegaDados(chrome, url):
         dados['cod'] = 'N/A'
 
     try:
-        preco_anterior = anuncio['ad']["oldPrice"]
-        dados['preco_anterior'] = preco_anterior
-    except:
-        na = 1
-        dados['preco_anterior'] = 'N/A'
-
-    try:
         preco_str = chrome.find_element(by=By.XPATH, value = "//body/div/div/div/div/div/div/div/div/div/div/div/div[2]/h2[2]").get_attribute('innerHTML')
         numeros = ''
         for caractere in preco_str:
@@ -78,13 +67,6 @@ def pegaDados(chrome, url):
     except:
         na = 1
         dados['preco'] = 'N/A'            
-
-    try:
-        imagem = anuncio['ad']["images"][0]["original"]
-        dados['imagem'] = imagem
-    except:
-        na = 1
-        dados['imagem'] = 'N/A'
 
     try:
         ano = chrome.find_element(by=By.XPATH, value = "//body/div/div/div/div/div/div/div/div[22]/div/div/div/div/div[3]/div/a").get_attribute('innerHTML')
@@ -121,19 +103,6 @@ def pegaDados(chrome, url):
         dados['cidade'] = cidade
     except:
         dados['cidade'] = None
-
-    try:     
-        bairro = chrome.find_element(By.XPATH, '//body/div/div/div/div/div/div/div/div[26]/div/div/div/div/div/div[3]/div/dd').get_attribute('innerHTML')
-        dados['bairro'] = bairro
-    except:
-        dados['bairro'] = None
-
-    try:    
-        cep = chrome.find_element(By.XPATH, '//body/div/div/div/div/div/div/div/div[26]/div/div/div/div/div/div[1]/div/dd').get_attribute('innerHTML')
-        dados['cep'] = cep
-    except:
-        dados['cep'] = None
-
 
     dados['url'] = url
 
