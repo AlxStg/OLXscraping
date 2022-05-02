@@ -52,7 +52,6 @@ def pegaDados(chrome, url):
     try:
         marca = chrome.find_element(by=By.XPATH, value="//head/title").get_attribute('innerHTML')
         dados['marca'] = marca.split(' ')[0].strip()
-        print(dados['marca'])
     except:
         na = 1
         dados['marca'] = 'N/A'
@@ -94,10 +93,15 @@ def pegaDados(chrome, url):
         dados['km'] = None
 
     try:
-        cilindradas = anuncio['ad']["properties"][4]["value"]
+        cilindradas = chrome.find_element(by=By.XPATH, value="//body/div/div/div/div/div/div/div/div/div/div/div/div/div[5]/div/dd").get_attribute('innerHTML')
         dados['cilindradas'] = cilindradas
     except:
-        dados['cilindradas'] = None
+        try:
+            cilindradas = anuncio['ad']["properties"][4]["value"]
+            dados['cilindradas'] = cilindradas
+        except:
+            na = 1
+            dados['cilindradas'] = 'N/A'
 
     try:    
         tipo = anuncio['ad']["trackingSpecificData"][1]["value"]
@@ -122,4 +126,3 @@ def pegaDados(chrome, url):
     
    
     return saida
-    

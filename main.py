@@ -85,19 +85,12 @@ for i, url in enumerate(url_list):
     while na == 1:
         cont_while += 1    
         try:
-            
             recebe = pegaDados(chrome, url)
-            print(recebe)
             atrib_anun = recebe[1]
             na = recebe[0]
-            if len(atrib_anun) == 14 and na == 0 or cont_while == 10:   
-                dados_anuncios.append(atrib_anun)
-                print(recebe[0])
-                print('Coletado')
+            dados_anuncios.append(atrib_anun)
+            print('Coletado')
                 
-            else:
-                raise error.Invalid
-        
         except:
             cont_falha_captura += 1
             print(f'Falha na captura: {cont_falha_captura} --- url: {url}')
@@ -105,7 +98,7 @@ for i, url in enumerate(url_list):
         
         if cont_while == 10:
             break
-    
+
     print(F'>>>>>>>>>>> NA: {na}')    
     print(f'>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Anuncios percorridos: {contador}')
 
@@ -122,7 +115,7 @@ print(var_data)
 # Salva os dados coletados em um arquivo csv
 header = ['data','nome', 'preco', 'ano', 'km', 'cilindradas', 'marca','tipo', 'cidade', 'cod', 'url']
 try:
-    with open(var_data, 'w') as f:
+    with open(var_data, 'w', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=header)
         writer.writeheader()
         for elem in dados_anuncios:
